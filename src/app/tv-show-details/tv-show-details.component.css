@@ -1,0 +1,100 @@
+#background {
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.poster-container {
+    flex: 1;
+    padding: 20px;
+}
+
+#poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-description {
+    flex: 1;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    background-image: url("https://loodibee.com/wp-content/uploads/Netflix-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.rating span {
+    margin-right: 5px;
+    color: #e50914;
+
+}
+
+.buttons {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.play {
+    background-color: #e50914;
+    /* Netflix red color */
+    color: #fff;
+}
+
+.add {
+    background-color: #333;
+    /* Dark gray color */
+    color: #fff;
+    margin-left: 5px;
+
+}

@@ -1,0 +1,23 @@
+<div class="watchlist">
+  <h1 style="color:aliceblue">Watch List</h1>
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4" *ngFor="let movie of watchlistItems">
+      <div class="card">
+        <img [src]="basepath + movie.poster_path" class="card-img-top" alt="Movie 1">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">Price: $9.99/month</p>
+          <p>quantity: {{movie.quantity}}</p>
+          
+          <button class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="total">
+    <p style="color:aliceblue">Total: $19.98/month</p>
+    <button class="btn btn-danger">Proceed to Checkout</button>
+  </div>
+</div>

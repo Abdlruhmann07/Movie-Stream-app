@@ -1,0 +1,43 @@
+
+<div id="background">
+  <article class="card-container">
+    <div class="poster-container">
+      <div id="poster">
+        <img
+        [src]="basepath + selectedmovie.poster_path"
+        alt=""
+        class="img-responsive"
+      />
+      </div>
+    </div>
+    
+    <div class="card-description">
+      <div class="logo-container">
+      <div class="logo">
+      </div>
+      </div>
+      <h2>{{selectedmovie.title}}</h2>
+      <p class="rating">
+        <span>
+        {{selectedmovie.vote_average}}
+        <br>
+        </span>
+        <span>({{selectedmovie.vote_count}})</span>
+        <br>
+        <span>{{selectedmovie.release_date}}</span>
+        <br>
+        <span>2h 13m</span>
+      </p>
+      <p>{{selectedmovie.overview}}</p>
+      
+      <p><span class="span">Starring:</span> Winona Ryder, David Harbour, Finn Wolfhard... </p>
+      <p><span class="span">Directed by:</span> The Duffer Brothers</p>
+      <div class="buttons">
+        
+        <div class="button play">PLAY NOW</div>
+        
+        <div class="button add">ADD TO WATCHLIST</div>
+      </div>
+    </div>
+  </article>
+</div>

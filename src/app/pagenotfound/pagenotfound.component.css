@@ -1,0 +1,71 @@
+* {
+    margin-bottom: 10%;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://wallpaperaccess.com/full/2595875.jpg");
+    background-size: cover;
+
+}
+
+.error-content {
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 3px;
+
+}
+
+img {
+    width: 150px;
+    height: auto;
+}
+
+h1 {
+    font-size: 8em;
+    margin: 0;
+    color: #e50914;
+    /* Netflix red color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Add a subtle text shadow */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect on hover */
+}
+
+h1:hover {
+    transform: scale(1.1);
+    /* Increase the size of the heading on hover */
+}
+
+h3 {
+    color: whitesmoke;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e50914;
+    /* Netflix red color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #b90a10;
+    /* Darker shade of Netflix red */
+}

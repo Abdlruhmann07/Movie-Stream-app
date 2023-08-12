@@ -1,0 +1,16 @@
+#about-section {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about-section h1 {
+    color: #e50914;
+    /* Netflix red color */
+}
+
+#about-section p {
+    color: #ccc;
+    /* Light gray color */
+}
