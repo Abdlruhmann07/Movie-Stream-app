@@ -10,6 +10,7 @@ const app = express();
 //Importing modules
 const Movies = require('./Models/Movies')
 const User = require('./Models/Users')
+const Order = require('./Models/Orders')
 
 // Current user
 const CurrentUser = {
@@ -147,11 +148,12 @@ app.get('/watchlist', (req, res) => {
                     vote_count: movie.vote_count,
 
                     quantity: userinfo.watchlist.items.find(item => {
+
                         return item.movieID.toString() == movie._id.toString()
                     }).quantity,
                 }
             })
-            res.json(items)
+            res.json(items,)
         })
 
     }).catch(err => {
@@ -159,6 +161,43 @@ app.get('/watchlist', (req, res) => {
     })
 });
 
+// Place Order!
+app.post('/placeorder', (req, res) => {
+    let watchlistItmes = req.body.watchlistItmes
+    console.log(watchlistItmes);
+    let newOrder = new Order({
+        items: watchlistItmes,
+        user: {
+            _id: new mongoose.Types.ObjectId(CurrentUser._id),
+            username: CurrentUser.username,
+            email: CurrentUser.email,
+        },
+    })
+    newOrder.save().then(createdOrder => {
+        console.log(createdOrder);
+        User.updateOne(
+            { _id: CurrentUser._id },
+            { $set: { watchlist: { itmes: [] } } }
+        ).then(updatedWatchlsit => {
+            console.log(updatedWatchlsit);
+            res.json('order Created!')
+        })
+    }).catch(err => {
+        console.log(err);
+    })
+})
+
+// Get Orders
+app.get("/orders", (req, res) => {
+    Order.find({ "user._id": CurrentUser._id })
+        .then((userOrders) => {
+            console.log(userOrders);
+            res.json(userOrders)
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+})
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`)
 })

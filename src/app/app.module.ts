@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -38,6 +39,7 @@ import { CartComponent } from './cart/cart.component';
     MovieRatingComponent,
     TvShowDetailsComponent,
     CartComponent,
+    OrderComponent,
 
 
 

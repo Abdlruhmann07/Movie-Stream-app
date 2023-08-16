@@ -8,6 +8,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { TvshowComponent } from './tvshow/tvshow.component';
 import { TvShowDetailsComponent } from './tv-show-details/tv-show-details.component';
 import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'moviesDetails/:id', component: MovieDetailsComponent },
   { path: 'tvShowDetails/:id', component: TvShowDetailsComponent },
   { path: 'watchlist', component: CartComponent },
+  { path: 'orders', component: OrderComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PagenotfoundComponent },
 

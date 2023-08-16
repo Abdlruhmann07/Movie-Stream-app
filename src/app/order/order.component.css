@@ -1,0 +1,67 @@
+/* Container for the cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Card styling */
+.card.movie_card {
+    background-color: #141414;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.movie_card:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.card.movie_card img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Card body styling */
+.card.movie_card .card-body {
+    padding: 1rem;
+}
+
+.card.movie_card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card.movie_card .movie_info {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Placeholder styling */
+.row h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+/* Order number styling */
+.row p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#NoOrders {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

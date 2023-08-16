@@ -34,6 +34,14 @@ export class MoviesServiceService {
   getWatchlist(): Observable<any> {
     return this.http.get(`${this.baseUrl}/watchlist`)
   }
+
+  placeOrder(items: any[],): Observable<any> {
+    return this.http.post(`${this.baseUrl}/placeorder`, { watchlistItmes: items })
+  }
+
+  getOrders(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/orders`);
+  }
 }
 
 

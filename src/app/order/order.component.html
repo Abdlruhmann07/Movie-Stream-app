@@ -1,0 +1,29 @@
+
+<h1 style="color: aliceblue;">Your Orders</h1>
+<div class="row" *ngIf="userOrders.length > 0">
+    <div class="card movie_card col-lg-6 mt-3" *ngFor="let order of userOrders">
+      <div class="row">
+        
+        <p>#order:{{ order._id }}</p>
+        <div *ngFor="let item of order.items">
+        <div clas="row">
+            
+        </div>
+          <div class="col-lg-2">
+            <img [src]="basepath + item.poster_path" class="card-img-top" alt="Order 1">
+          </div>
+          <div class="card-body col-10">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <h4 class="movie_info">quantity: {{ item.quantity }}</h4>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="NoOrders" class="row" *ngIf="userOrders.length == 0 ">
+    <h2 style= "color: aliceblue">No orders placed Yet!</h2>
+  </div>
+  
